@@ -462,12 +462,12 @@ do {\
     }
     
     if ([[_wordWrap lowercaseString] isEqualToString:@"break-word"]) {
-        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+        paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
     } else if ([[_wordWrap lowercaseString] isEqualToString:@"normal"]){
         paragraphStyle.lineBreakMode = NSLineBreakByClipping;
     } else {
          // set default lineBreakMode
-        paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     }
     _truncationLine = NO;
     if (_textOverflow && [_textOverflow length] > 0) {
@@ -590,12 +590,12 @@ do {\
     textContainer.lineFragmentPadding = 0.0;
     
     if ([[_wordWrap lowercaseString] isEqualToString:@"break-word"]) {
-        textContainer.lineBreakMode = NSLineBreakByWordWrapping;
+        textContainer.lineBreakMode = NSLineBreakByCharWrapping;
     } else if ([[_wordWrap lowercaseString] isEqualToString:@"normal"]){
         textContainer.lineBreakMode = NSLineBreakByClipping;
     } else {
         // set default lineBreakMode
-        textContainer.lineBreakMode = NSLineBreakByCharWrapping;
+        textContainer.lineBreakMode = NSLineBreakByWordWrapping;
     }
     
     if (_textOverflow && [_textOverflow length] > 0) {
