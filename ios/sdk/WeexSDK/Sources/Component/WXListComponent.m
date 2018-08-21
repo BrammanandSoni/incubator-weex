@@ -166,7 +166,7 @@
     _tableView.estimatedSectionFooterHeight = 0;
     _tableView.estimatedSectionHeaderHeight = 0;
     
-    if ([[self.attributes objectForKey:@"disable-bounce"] boolValue]) {
+    if ([[self.attributes objectForKey:@"disableBounce"] boolValue]) {
         [self setOnScroll:^(UIScrollView *scrollView) {
             scrollView.bounces = NO;
         }];
